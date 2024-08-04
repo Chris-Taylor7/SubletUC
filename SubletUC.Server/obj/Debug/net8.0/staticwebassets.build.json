@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "eKNgzrQcH+Cix16vSRhEd6XAX7evJk6urK6EGypk6uU=",
+  "Source": "SubletUC.Server",
+  "BasePath": "_content/SubletUC.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\chtay\\OneDrive\\Desktop\\source\\repos\\SubletUC\\subletuc.client\\subletuc.client.esproj",
+      "Version": 2,
+      "Source": "subletuc.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
