@@ -80,3 +80,4 @@ desktop.ini
 *.swo
 # Ignore Visual Studio files
 .vs/
+.vsidx
