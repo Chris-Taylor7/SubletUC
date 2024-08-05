@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'new-listing', component: NewListingComponent },
   { path: 'find-room', component: FindRoomComponent },
   { path: 'bookmarked-listings', component: BookmarkedListingsComponent },
-  { path: 'profile', component: AccountComponent }
+  { path: 'account', component: AccountComponent }
 ];
 
 @NgModule({

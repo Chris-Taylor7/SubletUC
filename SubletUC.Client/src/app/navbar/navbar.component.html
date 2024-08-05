@@ -5,12 +5,12 @@
         </a>
     </div>
     <div class="pages">
-        <a routerLink="/new-listing">Create a listing</a>
-        <a routerLink="/find-room">Find a Room</a>
-        <a routerLink="/bookmarked-listings">
+        <a [routerLink]="['new-listing']">Create a listing</a>
+        <a [routerLink]="['find-room']">Find a Room</a>
+        <a [routerLink]="['bookmarked-listings']">
             <img src="assets/bookmark-icon.png" alt="">
             Bookmarked
         </a>
-        <a routerLink="/profile">Profile</a>
+        <a [routerLink]="['account']">Profile</a>
     </div>
 </div>
