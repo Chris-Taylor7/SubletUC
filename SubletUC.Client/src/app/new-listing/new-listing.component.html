@@ -1,149 +1,101 @@
-<div id="form">
-<form action="new-listing.component.ts">
-    <!--address-->
-    <div>Address</div>
-    <div class="wave-group">
-        <input required="" type="text" class="input">
-        <span class="bar"></span>
-        <label class="label">
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
-            <span class="label-char" style="--index: 3">e</span>
-        </label>
+<form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+    <!-- Address -->
+    <div>
+      <label for="address">Address</label>
+      <input id="address" formControlName="address" required />
     </div>
-    <br>
-    <!--Rent per person-->
-    <div>Rent Per person</div>
-    <div class="wave-group">
-        <input required="" type="text" class="input">
-        <span class="bar"></span>
-        <label class="label">
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
-            <span class="label-char" style="--index: 3">e</span>
-        </label>
+  
+    <!-- Rent Per Person -->
+    <div>
+      <label for="rent">Rent Per Person</label>
+      <input id="rent" formControlName="rent" type="number" required />
     </div>
-    <br>
-    <!--Utilities included?-->
-    <div>Utilities Included?</div>
-    <mat-checkbox></mat-checkbox>
-    <br>   
-    <!--Average Utilities per month-->
-    <div>Average Utilities Per Month</div>
-    <div class="wave-group">
-        <input required="" type="text" class="input">
-        <span class="bar"></span>
-        <label class="label">
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
-            <span class="label-char" style="--index: 3">e</span>
-        </label>
+  
+    <!-- Utilities Included? -->
+    <div>
+      <label for="utilities_included">Utilities Included?</label>
+      <mat-checkbox id="utilities_included" formControlName="utilities_included"></mat-checkbox>
     </div>
-    <br> 
-    <!--Number of Bathrooms-->
-    <div>Number of Bathrooms</div>
-    <div class="wave-group">
-        <input required="" type="text" class="input">
-        <span class="bar"></span>
-        <label class="label">
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
-            <span class="label-char" style="--index: 3">e</span>
-        </label>
+  
+    <!-- Average Utilities Per Month -->
+    <div>
+      <label for="average_monthly_utilities">Average Utilities Per Month</label>
+      <input id="average_monthly_utilities" formControlName="average_monthly_utilities" type="number" required />
     </div>
-    <br>
-    <!--Number of Roommates-->
-    <div>Number of Roommates</div>
-    <div class="wave-group">
-        <input required="" type="text" class="input">
-        <span class="bar"></span>
-        <label class="label">
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
-            <span class="label-char" style="--index: 3">e</span>
-        </label>
+  
+    <!-- Number of Bathrooms -->
+    <div>
+      <label for="number_of_bathrooms">Number of Bathrooms</label>
+      <input id="number_of_bathrooms" formControlName="number_of_bathrooms" type="number" required />
     </div>
-    <br>
-    <!--Male-->
-    <div>Male</div>
-    <mat-checkbox></mat-checkbox>
-    <br>
-    <!--Female-->
-    <div>Female</div>
-    <mat-checkbox></mat-checkbox>
-    <br>
-    <!--Other-->
-    <div>Other</div>
-    <mat-checkbox></mat-checkbox>
-    <br>
-
-    <!--Description-->
-    <div>Description</div>
-    <textarea matInput></textarea>
-    <br>
-    <!--Length of Availability-->
-    <div>Length of Availability</div>
-    <div class="wave-group">
-        <input required="" type="text" class="input">
-        <span class="bar"></span>
-        <label class="label">
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
-            <span class="label-char" style="--index: 3">e</span>
-        </label>
+  
+    <!-- Number of Roommates -->
+    <div>
+      <label for="number_of_roomates">Number of Roommates</label>
+      <input id="number_of_roomates" formControlName="number_of_roomates" type="number" required />
     </div>
-    <br>
-    <!--Amenities-->
-    <!--Pets. Specify types allowed -->
-    <div>Specify types of pets if applicable</div>
-    <div class="wave-group">
-        <input required="" type="text" class="input">
-        <span class="bar"></span>
-        <label class="label">
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
-            <span class="label-char" style="--index: 3">e</span>
-        </label>
+  
+    <!-- Male -->
+    <div>
+      <label for="males">Male</label>
+      <input id="males" formControlName="males" type="number" />
     </div>
-    <br>
-    <!--In Unit Washer/Dryer-->
-    <div>In Unit Washer/Dryer?</div>
-    <input type="checkbox">
-    <br>
-    <!--Driveway Parking-->
-    <div>Driveway Parking?</div>
-    <input type="checkbox">
-    <br>
-    <!--Off-Street Parking-->
-    <div>Off Street Parking?</div>
-    <input type="checkbox">
-    <br>
-
-
-    <!--upload pictures-->
-    <div>Upload Pictures</div> 
-    <input type="file">
-    <br>
-    <input type="file">
-    <br>
-    <input type="file">
-    <br>
-    <br><br>
-
-    <!--SUBMIT-->
-    <button class="pushable" type="submit">
-        <span class="shadow"></span>
-        <span class="edge"></span>
-        <span class="front">
-          Push Me
-        </span>
-      </button>
-</form>
-</div>
+  
+    <!-- Female -->
+    <div>
+      <label for="females">Female</label>
+      <input id="females" formControlName="females" type="number" />
+    </div>
+  
+    <!-- Other -->
+    <div>
+      <label for="other_gender">Other</label>
+      <input id="other_gender" formControlName="other_gender" type="number" />
+    </div>
+  
+    <!-- Description -->
+    <div>
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+  
+    <!-- Length of Availability -->
+    <div>
+      <label for="availability">Length of Availability</label>
+      <input id="availability" formControlName="availability" required />
+    </div>
+  
+    <!-- Pets -->
+    <div>
+      <label for="pets">Specify types of pets if applicable</label>
+      <input id="pets" formControlName="pets" />
+    </div>
+  
+    <!-- In Unit Washer/Dryer? -->
+    <div>
+      <label for="washer_dryer">In Unit Washer/Dryer?</label>
+      <input id="washer_dryer" formControlName="washer_dryer" type="checkbox" />
+    </div>
+  
+    <!-- Driveway Parking? -->
+    <div>
+      <label for="driveway_parking">Driveway Parking?</label>
+      <input id="driveway_parking" formControlName="driveway_parking" type="checkbox" />
+    </div>
+  
+    <!-- Off-Street Parking? -->
+    <div>
+      <label for="street_parking">Off Street Parking?</label>
+      <input id="street_parking" formControlName="street_parking" type="checkbox" />
+    </div>
+  
+    <!-- Upload Pictures -->
+    <div>
+      <label for="pictures">Upload Pictures</label>
+      <input id="pictures" type="file" (change)="onFileChange($event)" multiple />
+    </div>
+  
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+  
