@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubletUC.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9382287aa9627b2c4e9a579dc22d416ea991f394")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubletUC.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubletUC.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

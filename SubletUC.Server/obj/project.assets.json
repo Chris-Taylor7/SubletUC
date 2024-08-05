@@ -3191,6 +3191,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.SpaProxy >= 8.*-*",
+      "Microsoft.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore.SQLServer >= 8.0.7",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -3243,6 +3244,10 @@
           "Microsoft.AspNetCore.SpaProxy": {
             "target": "Package",
             "version": "[8.*-*, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.0.7, )"
           },
           "Microsoft.EntityFrameworkCore.SQLServer": {
             "target": "Package",
