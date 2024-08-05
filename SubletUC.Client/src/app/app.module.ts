@@ -10,6 +10,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { MapViewComponent } from './map-view/map-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     CreateAccountComponent,
     MapViewComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
