@@ -17,7 +17,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input'
 import { MatCommonModule } from '@angular/material/core';
-import { MatCheckbox } from '@angular/material/checkbox'
+import { MatCheckbox } from '@angular/material/checkbox';
+import { MatLabel } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { MatCheckbox } from '@angular/material/checkbox'
     MatInputModule,
     MatButtonModule,
     MatCheckbox,
+    MatLabel,
     ReactiveFormsModule,
   ],
   providers: [
