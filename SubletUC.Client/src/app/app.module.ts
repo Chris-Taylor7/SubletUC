@@ -9,6 +9,7 @@ import { NewListingComponent } from './new-listing/new-listing.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { MapViewComponent } from './map-view/map-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     NewListingComponent,
     CreateAccountComponent,
     MapViewComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
