@@ -11,6 +11,8 @@ import { MapViewComponent } from './map-view/map-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
+import { FindRoomComponent } from './find-room/find-room.component';
+import { BookmarkedListingsComponent } from './bookmarked-listings/bookmarked-listings.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AccountComponent } from './account/account.component';
     MapViewComponent,
     NavbarComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    FindRoomComponent,
+    BookmarkedListingsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

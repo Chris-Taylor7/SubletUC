@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar .pages a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.navbar .pages a:hover {
+    text-decoration: underline;
+}
+
+.navbar .pages img {
+    vertical-align: middle;
+    height: 20px;
+    margin-right: 5px;
+}
