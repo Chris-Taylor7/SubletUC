@@ -1,1 +1,16 @@
-<p>navbar works!</p>
+<div class="navbar">
+    <div class="logo">
+        <a routerLink="/home">
+            <img src="assets/logo.png" alt="Logo">
+        </a>
+    </div>
+    <div class="pages">
+        <a [routerLink]="['new-listing']">Create a listing</a>
+        <a [routerLink]="['find-room']">Find a Room</a>
+        <a [routerLink]="['bookmarked-listings']">
+            <img src="assets/bookmark-icon.png" alt="">
+            Bookmarked
+        </a>
+        <a [routerLink]="['account']">Profile</a>
+    </div>
+</div>
