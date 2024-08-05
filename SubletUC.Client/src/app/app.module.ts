@@ -13,7 +13,11 @@ import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { FindRoomComponent } from './find-room/find-room.component';
 import { BookmarkedListingsComponent } from './bookmarked-listings/bookmarked-listings.component';
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input'
+import { MatCommonModule } from '@angular/material/core';
+import { MatCheckbox } from '@angular/material/checkbox'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +33,15 @@ import { BookmarkedListingsComponent } from './bookmarked-listings/bookmarked-li
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCommonModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckbox,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
