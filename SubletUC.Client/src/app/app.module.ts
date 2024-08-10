@@ -19,6 +19,8 @@ import { MatInputModule } from '@angular/material/input'
 import { MatCommonModule } from '@angular/material/core';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { MatLabel } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
