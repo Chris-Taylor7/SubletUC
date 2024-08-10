@@ -42,6 +42,10 @@ import { MatLabel } from '@angular/material/input';
     MatLabel,
     ReactiveFormsModule,
     FormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     provideAnimationsAsync()
