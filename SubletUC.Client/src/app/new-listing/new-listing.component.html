@@ -1,107 +1,122 @@
 <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
-    <!-- Address -->
-    <mat-form-field appearance="fill">
-      <mat-label>Address</mat-label>
-      <input matInput id="address" formControlName="address" required />
-    </mat-form-field>
-  
-    <!-- Rent Per Person -->
-    <mat-form-field appearance="fill">
-      <mat-label>Rent Per Person</mat-label>
-      <input matInput id="rent" formControlName="rent" type="number" required />
-    </mat-form-field>
-  
-    <!-- Utilities Included? -->
-    <div>
-      <mat-checkbox id="utilities_included" formControlName="utilities_included">
-        Utilities Included?
-      </mat-checkbox>
-    </div>
-  
-    <!-- Average Utilities Per Month -->
-    <mat-form-field appearance="fill">
-      <mat-label>Average Utilities Per Month</mat-label>
-      <input matInput id="average_monthly_utilities" formControlName="average_monthly_utilities" type="number" required />
-    </mat-form-field>
-  
-    <!-- Number of Bathrooms -->
-    <mat-form-field appearance="fill">
-      <mat-label>Number of Bathrooms</mat-label>
-      <input matInput id="number_of_bathrooms" formControlName="number_of_bathrooms" type="number" required />
-    </mat-form-field>
-  
-    <!-- Number of Roommates -->
-    <mat-form-field appearance="fill">
-      <mat-label>Number of Roommates</mat-label>
-      <input matInput id="number_of_roomates" formControlName="number_of_roomates" type="number" required />
-    </mat-form-field>
-  
-    <!-- Male -->
-    <mat-form-field appearance="fill">
-      <mat-label>Male</mat-label>
-      <input matInput id="males" formControlName="males" type="number" />
-    </mat-form-field>
-  
-    <!-- Female -->
-    <mat-form-field appearance="fill">
-      <mat-label>Female</mat-label>
-      <input matInput id="females" formControlName="females" type="number" />
-    </mat-form-field>
-  
-    <!-- Other -->
-    <mat-form-field appearance="fill">
-      <mat-label>Other</mat-label>
-      <input matInput id="other_gender" formControlName="other_gender" type="number" />
-    </mat-form-field>
-  
-    <!-- Description -->
-    <mat-form-field appearance="fill">
-      <mat-label>Description</mat-label>
-      <textarea matInput id="description" formControlName="description"></textarea>
-    </mat-form-field>
-  
-    <!-- Length of Availability -->
-    <mat-form-field appearance="fill">
-      <mat-label>Length of Availability</mat-label>
-      <input matInput id="availability" formControlName="availability" required />
-    </mat-form-field>
-  
-    <!-- Pets -->
-    <mat-form-field appearance="fill">
-      <mat-label>Specify types of pets if applicable</mat-label>
-      <input matInput id="pets" formControlName="pets" />
-    </mat-form-field>
-  
-    <!-- In Unit Washer/Dryer? -->
-    <div>
-      <mat-checkbox id="washer_dryer" formControlName="washer_dryer">
-        In Unit Washer/Dryer?
-      </mat-checkbox>
-    </div>
-  
-    <!-- Driveway Parking? -->
-    <div>
-      <mat-checkbox id="driveway_parking" formControlName="driveway_parking">
-        Driveway Parking?
-      </mat-checkbox>
-    </div>
-  
-    <!-- Off-Street Parking? -->
-    <div>
-      <mat-checkbox id="street_parking" formControlName="street_parking">
-        Off Street Parking?
-      </mat-checkbox>
-    </div>
-  
-    <!-- Upload Pictures -->
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Upload Pictures</mat-label>
-        <input id="pictures" type="file" (change)="onFileChange($event)" multiple />
-      </mat-form-field>
-    </div>
-  
-    <!-- Submit Button -->
-    <button mat-raised-button color="primary" type="submit">Submit</button>
-  </form>
-  
+  <!-- Address -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Address</mat-label>
+    <input matInput id="address" formControlName="address" required />
+  </mat-form-field>
+  <br>
+
+  <!-- Rent Per Person -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Rent Per Person</mat-label>
+    <input matInput id="rent" formControlName="rent" type="number" required />
+  </mat-form-field>
+  <br>
+
+  <!-- Utilities Included? -->
+  <div>
+    <mat-checkbox id="utilities_included" formControlName="utilities_included">
+      Utilities Included?
+    </mat-checkbox>
+  </div>
+  <br>
+
+  <!-- Average Utilities Per Month -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Average Utilities Per Month</mat-label>
+    <input matInput id="average_monthly_utilities" formControlName="average_monthly_utilities" type="number" required />
+  </mat-form-field>
+  <br>
+
+  <!-- Number of Bathrooms -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Number of Bathrooms</mat-label>
+    <input matInput id="number_of_bathrooms" formControlName="number_of_bathrooms" type="number" required />
+  </mat-form-field>
+  <br>
+
+  <!-- Number of Roommates -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Number of Roommates</mat-label>
+    <input matInput id="number_of_roomates" formControlName="number_of_roomates" type="number" required />
+  </mat-form-field>
+  <br>
+
+  <!-- Male -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Male</mat-label>
+    <input matInput id="males" formControlName="males" type="number" />
+  </mat-form-field>
+  <br>
+
+  <!-- Female -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Female</mat-label>
+    <input matInput id="females" formControlName="females" type="number" />
+  </mat-form-field>
+  <br>
+
+  <!-- Other -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Other</mat-label>
+    <input matInput id="other_gender" formControlName="other_gender" type="number" />
+  </mat-form-field>
+  <br>
+
+  <!-- Description -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput id="description" formControlName="description"></textarea>
+  </mat-form-field>
+  <br>
+
+  <!-- Length of Availability -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Length of Availability</mat-label>
+    <input matInput id="availability" formControlName="availability" required />
+  </mat-form-field>
+  <br>
+
+  <!-- Pets -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Specify types of pets if applicable</mat-label>
+    <input matInput id="pets" formControlName="pets" />
+  </mat-form-field>
+  <br>
+
+  <!-- In Unit Washer/Dryer? -->
+  <div>
+    <mat-checkbox id="washer_dryer" formControlName="washer_dryer">
+      In Unit Washer/Dryer?
+    </mat-checkbox>
+  </div>
+  <br>
+
+  <!-- Driveway Parking? -->
+  <div>
+    <mat-checkbox id="driveway_parking" formControlName="driveway_parking">
+      Driveway Parking?
+    </mat-checkbox>
+  </div>
+  <br>
+
+  <!-- Off-Street Parking? -->
+  <div>
+    <mat-checkbox id="street_parking" formControlName="street_parking">
+      Off Street Parking?
+    </mat-checkbox>
+  </div>
+  <br>
+
+  <!-- Upload Pictures -->
+  <div>
+    <label for="pictures">Upload Pictures</label>
+    <br>
+    <input id="pictures" type="file" (change)="onFileChange($event)" multiple />
+  </div>
+  <br>
+
+  <!-- Submit Button -->
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+

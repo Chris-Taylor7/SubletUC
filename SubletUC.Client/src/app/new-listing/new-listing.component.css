@@ -89,3 +89,12 @@
 #form {
   align-items: center;
 } */
+
+.full-width {
+  width: 50%; /* Makes the input fields as wide as the parent container */
+}
+form {
+  background-color: red;
+  margin-top: auto;
+  padding-top: 20px;
+}
