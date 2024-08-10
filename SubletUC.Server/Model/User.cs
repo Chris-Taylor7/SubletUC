@@ -1,7 +1,7 @@
 // Models/User.cs
 using System.ComponentModel.DataAnnotations;
 
-namespace SubletUC.Server.Models
+namespace SubletUC.Server
 {
     public class User
     {
