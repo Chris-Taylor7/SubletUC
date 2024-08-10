@@ -1,4 +1,5 @@
 export class Property {
+    id?: number;
     address?: string;
     rent?: number;
     utilities_included?: boolean;

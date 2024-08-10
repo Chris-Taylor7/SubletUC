@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, numberAttribute } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,9 @@ export class NewListingComponent {
   propertyForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
+
     this.propertyForm = this.fb.group({
+      id: 0,
       address: ['', Validators.required],
       rent: ['', Validators.required],
       utilities_included: [false],
