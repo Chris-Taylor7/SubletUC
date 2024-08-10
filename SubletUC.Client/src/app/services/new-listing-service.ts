@@ -14,7 +14,7 @@ export class NewListingService {
   constructor(private http: HttpClient) { }
 
   // Method to create a new listing
-  createOrUodateProperty(new_listing: Property): Observable<Property> {
+  createOrUpdateProperty(new_listing: FormData): Observable<Property> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<Property>(this.apiUrl, new_listing, { headers })
   }

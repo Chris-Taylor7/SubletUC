@@ -91,7 +91,7 @@
 } */
 
 .full-width {
-  width: 50%; /* Makes the input fields as wide as the parent container */
+  width: 60%; /* Makes the input fields as wide as the parent container */
 }
 form {
   background-color: red;

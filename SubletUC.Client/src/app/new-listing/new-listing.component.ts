@@ -1,60 +1,79 @@
-import { Component, numberAttribute } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { NewListingService } from '../services/new-listing-service';
+import { Property } from '../models/property';
 
 @Component({
   selector: 'app-new-listing',
   templateUrl: './new-listing.component.html',
-  styleUrl: './new-listing.component.css'
+  styleUrls: ['./new-listing.component.css']
 })
 export class NewListingComponent {
-  propertyForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  newListing: Property = {
+    id: 0,
+    address: '',
+    rent: 0,
+    utilities_included: false,
+    average_monthly_utilities: 0,
+    number_of_bathrooms: 0,
+    number_of_roommates: 0,
+    males: 0,
+    females: 0,
+    other_gender: 0,
+    description: '',
+    availability: '',
+    pets: '',
+    washer_dryer: false,
+    driveway_parking: false,
+    street_parking: false,
+    pictures: []
+  };
 
-    this.propertyForm = this.fb.group({
-      id: 0,
-      address: ['', Validators.required],
-      rent: ['', Validators.required],
-      utilities_included: [false],
-      average_monthly_utilities: ['', Validators.required],
-      number_of_bathrooms: ['', Validators.required],
-      number_of_roomates: ['', Validators.required],
-      males: [0],
-      females: [0],
-      other_gender: [0],
-      description: [''],
-      availability: ['', Validators.required],
-      pets: [''],
-      washer_dryer: [false],
-      driveway_parking: [false],
-      street_parking: [false],
-      pictures: [null]
-    });
-  }
+  constructor(private newListingService: NewListingService) {}
 
   onSubmit() {
-    if (this.propertyForm.valid) {
-      const formData = new FormData();
-      const formValues = this.propertyForm.value;
-
-      for (const key in formValues) {
-        if (key === 'pictures' && formValues[key]) {
-          // Add each file to formData
-          formValues[key].forEach((file: File) => formData.append('pictures', file));
-        } else {
-          formData.append(key, formValues[key]);
-        }
+    const formData = new FormData();
+  
+    if (this.newListing) {
+      // Add properties to FormData
+      formData.append('id', this.newListing.id?.toString() || '');
+      formData.append('address', this.newListing.address || '');
+      formData.append('rent', this.newListing.rent?.toString() || '');
+      formData.append('utilities_included', this.newListing.utilities_included?.toString() || '');
+      formData.append('average_monthly_utilities', this.newListing.average_monthly_utilities?.toString() || '');
+      formData.append('number_of_bathrooms', this.newListing.number_of_bathrooms?.toString() || '');
+      formData.append('number_of_roommates', this.newListing.number_of_roommates?.toString() || '');
+      formData.append('males', this.newListing.males?.toString() || '');
+      formData.append('females', this.newListing.females?.toString() || '');
+      formData.append('other_gender', this.newListing.other_gender?.toString() || '');
+      formData.append('description', this.newListing.description || '');
+      formData.append('availability', this.newListing.availability || '');
+      formData.append('pets', this.newListing.pets || '');
+      formData.append('washer_dryer', this.newListing.washer_dryer?.toString() || '');
+      formData.append('driveway_parking', this.newListing.driveway_parking?.toString() || '');
+      formData.append('street_parking', this.newListing.street_parking?.toString() || '');
+  
+      if (this.newListing.pictures) {
+        this.newListing.pictures.forEach((file: File) => formData.append('pictures', file));
       }
-
-      // Submit the form data
-      // this.yourService.submitForm(formData).subscribe(response => { ... });
     }
+  
+    // Call the service to submit the form data
+    this.newListingService.createOrUpdateProperty(formData).subscribe(response => {
+      // Handle the response here
+    });
   }
-
+  
+  
+  
   onFileChange(event: any) {
     if (event.target.files.length) {
-      const files = Array.from(event.target.files);
-      this.propertyForm.patchValue({ pictures: files });
+      const files = Array.from(event.target.files) as File[]; 
+      if (this.newListing) {
+        this.newListing.pictures = files;
+      }
     }
   }
+  
+  
 }

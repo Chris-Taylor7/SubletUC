@@ -5,7 +5,7 @@ export class Property {
     utilities_included?: boolean;
     average_monthly_utilities?: number;
     number_of_bathrooms?: number;
-    number_of_roomates?: number;
+    number_of_roommates?: number;
     males?: number;
     females?: number;
     other_gender?: number;
@@ -15,5 +15,9 @@ export class Property {
     washer_dryer?: boolean;
     driveway_parking?: boolean;
     street_parking?: boolean;
-    pictures?: File;
+    pictures?: File[]; // Update this line to an array of Files
+
+  constructor() {
+    this.pictures = [];
+  }
 }

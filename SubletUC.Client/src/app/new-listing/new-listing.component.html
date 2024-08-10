@@ -1,92 +1,92 @@
-<form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()">
   <!-- Address -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Address</mat-label>
-    <input matInput id="address" formControlName="address" required />
+    <input matInput [(ngModel)]="newListing.address" name="address" required />
   </mat-form-field>
   <br>
 
   <!-- Rent Per Person -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Rent Per Person</mat-label>
-    <input matInput id="rent" formControlName="rent" type="number" required />
+    <input matInput [(ngModel)]="newListing.rent" name="rent" type="number" required />
   </mat-form-field>
   <br>
 
   <!-- Utilities Included? -->
   <div>
-    <mat-checkbox id="utilities_included" formControlName="utilities_included">
+    <mat-checkbox [(ngModel)]="newListing.utilities_included" name="utilities_included">
       Utilities Included?
     </mat-checkbox>
   </div>
   <br>
 
   <!-- Average Utilities Per Month -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Average Utilities Per Month</mat-label>
-    <input matInput id="average_monthly_utilities" formControlName="average_monthly_utilities" type="number" required />
+    <input matInput [(ngModel)]="newListing.average_monthly_utilities" name="average_monthly_utilities" type="number" required />
   </mat-form-field>
   <br>
 
   <!-- Number of Bathrooms -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Number of Bathrooms</mat-label>
-    <input matInput id="number_of_bathrooms" formControlName="number_of_bathrooms" type="number" required />
+    <input matInput [(ngModel)]="newListing.number_of_bathrooms" name="number_of_bathrooms" type="number" required />
   </mat-form-field>
   <br>
 
   <!-- Number of Roommates -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Number of Roommates</mat-label>
-    <input matInput id="number_of_roomates" formControlName="number_of_roomates" type="number" required />
+    <input matInput [(ngModel)]="newListing.number_of_roommates" name="number_of_roommates" type="number" required />
   </mat-form-field>
   <br>
 
   <!-- Male -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Male</mat-label>
-    <input matInput id="males" formControlName="males" type="number" />
+    <input matInput [(ngModel)]="newListing.males" name="males" type="number" />
   </mat-form-field>
   <br>
 
   <!-- Female -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Female</mat-label>
-    <input matInput id="females" formControlName="females" type="number" />
+    <input matInput [(ngModel)]="newListing.females" name="females" type="number" />
   </mat-form-field>
   <br>
 
   <!-- Other -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Other</mat-label>
-    <input matInput id="other_gender" formControlName="other_gender" type="number" />
+    <input matInput [(ngModel)]="newListing.other_gender" name="other_gender" type="number" />
   </mat-form-field>
   <br>
 
   <!-- Description -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Description</mat-label>
-    <textarea matInput id="description" formControlName="description"></textarea>
+    <textarea matInput [(ngModel)]="newListing.description" name="description"></textarea>
   </mat-form-field>
   <br>
 
   <!-- Length of Availability -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Length of Availability</mat-label>
-    <input matInput id="availability" formControlName="availability" required />
+    <input matInput [(ngModel)]="newListing.availability" name="availability" required />
   </mat-form-field>
   <br>
 
   <!-- Pets -->
-  <mat-form-field appearance="fill" class="full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Specify types of pets if applicable</mat-label>
-    <input matInput id="pets" formControlName="pets" />
+    <input matInput [(ngModel)]="newListing.pets" name="pets" />
   </mat-form-field>
   <br>
 
   <!-- In Unit Washer/Dryer? -->
   <div>
-    <mat-checkbox id="washer_dryer" formControlName="washer_dryer">
+    <mat-checkbox [(ngModel)]="newListing.washer_dryer" name="washer_dryer">
       In Unit Washer/Dryer?
     </mat-checkbox>
   </div>
@@ -94,7 +94,7 @@
 
   <!-- Driveway Parking? -->
   <div>
-    <mat-checkbox id="driveway_parking" formControlName="driveway_parking">
+    <mat-checkbox [(ngModel)]="newListing.driveway_parking" name="driveway_parking">
       Driveway Parking?
     </mat-checkbox>
   </div>
@@ -102,7 +102,7 @@
 
   <!-- Off-Street Parking? -->
   <div>
-    <mat-checkbox id="street_parking" formControlName="street_parking">
+    <mat-checkbox [(ngModel)]="newListing.street_parking" name="street_parking">
       Off Street Parking?
     </mat-checkbox>
   </div>
@@ -111,7 +111,6 @@
   <!-- Upload Pictures -->
   <div>
     <label for="pictures">Upload Pictures</label>
-    <br>
     <input id="pictures" type="file" (change)="onFileChange($event)" multiple />
   </div>
   <br>
@@ -119,4 +118,3 @@
   <!-- Submit Button -->
   <button mat-raised-button color="primary" type="submit">Submit</button>
 </form>
-
