@@ -3202,11 +3202,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chtay\\OneDrive\\Desktop\\source\\repos\\SubletUC\\SubletUC.Server\\SubletUC.Server.csproj",
+      "projectUniqueName": "C:\\Users\\chtay\\Source\\Repos\\SubletUC\\SubletUC.Server\\SubletUC.Server.csproj",
       "projectName": "SubletUC.Server",
-      "projectPath": "C:\\Users\\chtay\\OneDrive\\Desktop\\source\\repos\\SubletUC\\SubletUC.Server\\SubletUC.Server.csproj",
+      "projectPath": "C:\\Users\\chtay\\Source\\Repos\\SubletUC\\SubletUC.Server\\SubletUC.Server.csproj",
       "packagesPath": "C:\\Users\\chtay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chtay\\OneDrive\\Desktop\\source\\repos\\SubletUC\\SubletUC.Server\\obj\\",
+      "outputPath": "C:\\Users\\chtay\\Source\\Repos\\SubletUC\\SubletUC.Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chtay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3217,7 +3217,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3277,7 +3276,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
