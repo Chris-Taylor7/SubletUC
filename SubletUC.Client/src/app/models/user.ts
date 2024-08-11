@@ -7,6 +7,7 @@ export class User {
     Email?: string;
     PhoneNumber?: number;
     PasswordHash?: string | undefined;
+    isSignedIn?: boolean;
 
     // Method to hash the password
     async hashPassword(password: string): Promise<void> {

@@ -5,7 +5,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class userService {
+  getCurrentUser(): import("../models/user").User {
+    throw new Error('Method not implemented.');
+  }
 
   private apiUrl = 'api/login';  // Replace with your actual API endpoint
 

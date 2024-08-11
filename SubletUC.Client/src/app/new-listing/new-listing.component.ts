@@ -63,9 +63,7 @@ export class NewListingComponent {
       // Handle the response here
     });
   }
-  
-  
-  
+
   onFileChange(event: any) {
     if (event.target.files.length) {
       const files = Array.from(event.target.files) as File[]; 
