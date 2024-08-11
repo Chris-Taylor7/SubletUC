@@ -90,7 +90,7 @@
   align-items: center;
 } */
 
-.full-width {
+mat-form-field {
   width: 60%; /* Makes the input fields as wide as the parent container */
 }
 form {
