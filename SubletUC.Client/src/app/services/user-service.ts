@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class userService {
+export class UserService {
   getCurrentUser(): import("../models/user").User {
     throw new Error('Method not implemented.');
   }

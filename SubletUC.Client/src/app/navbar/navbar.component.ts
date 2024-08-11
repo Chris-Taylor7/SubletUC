@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from '../models/user';
-import { userService } from '../services/user-service';
+import { UserService } from '../services/user-service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,7 +9,7 @@ import { userService } from '../services/user-service';
 export class NavbarComponent {
   currentUser?: User;
 
-  constructor(private userService: userService) {
+  constructor(private userService: UserService) {
     this.currentUser = this.userService.getCurrentUser();
   }
 }
